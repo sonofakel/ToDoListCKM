@@ -1,0 +1,19 @@
+﻿@model TravelBlog.Models.Location
+
+@{  
+    ViewData["Title"] = "Location Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a New Location</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Country)
+    @Html.TextBoxFor(model => model.Country)
+    @Html.LabelFor(model => model.City)
+    @Html.TextBoxFor(model => model.City)
+    <input type="submit" value="Add new location" class="btn btn-default" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

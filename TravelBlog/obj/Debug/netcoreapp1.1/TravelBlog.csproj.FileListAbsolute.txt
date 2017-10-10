@@ -1,0 +1,10 @@
+/Users/Guest/Desktop/TravelBlog/TravelBlog/bin/Debug/netcoreapp1.1/TravelBlog.deps.json
+/Users/Guest/Desktop/TravelBlog/TravelBlog/bin/Debug/netcoreapp1.1/TravelBlog.runtimeconfig.json
+/Users/Guest/Desktop/TravelBlog/TravelBlog/bin/Debug/netcoreapp1.1/TravelBlog.runtimeconfig.dev.json
+/Users/Guest/Desktop/TravelBlog/TravelBlog/bin/Debug/netcoreapp1.1/TravelBlog.dll
+/Users/Guest/Desktop/TravelBlog/TravelBlog/bin/Debug/netcoreapp1.1/TravelBlog.pdb
+/Users/Guest/Desktop/TravelBlog/TravelBlog/obj/Debug/netcoreapp1.1/TravelBlog.csprojResolveAssemblyReference.cache
+/Users/Guest/Desktop/TravelBlog/TravelBlog/obj/Debug/netcoreapp1.1/TravelBlog.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/TravelBlog/TravelBlog/obj/Debug/netcoreapp1.1/TravelBlog.AssemblyInfo.cs
+/Users/Guest/Desktop/TravelBlog/TravelBlog/obj/Debug/netcoreapp1.1/TravelBlog.dll
+/Users/Guest/Desktop/TravelBlog/TravelBlog/obj/Debug/netcoreapp1.1/TravelBlog.pdb
