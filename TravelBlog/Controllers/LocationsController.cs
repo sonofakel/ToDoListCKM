@@ -19,15 +19,16 @@ namespace TravelBlog.Controllers
         }
         public IActionResult Details(int id)
         {
-            var thisLocation = db.Locations.FirstOrDefault(location => location.LocationId == id);
+            var thisLocation = db.Locations.Include(locations => locations.Experiences).FirstOrDefault(location => location.LocationId == id);
          
             return View(thisLocation);
-
         }
+
         public IActionResult Create()
         {
             return View();
         }
+       
         [HttpPost]
         public IActionResult Create(Location location)
         {
@@ -45,7 +46,7 @@ namespace TravelBlog.Controllers
         {
             db.Entry(location).State = EntityState.Modified;
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", new {id = location.LocationId});
         }
         public IActionResult Delete(int id)
         {

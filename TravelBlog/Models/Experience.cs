@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -14,8 +15,9 @@ namespace TravelBlog.Models
         public string Story { get; set; }
 
 
+
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
-
+        public ICollection<Person> People { get; set; }
     }
 }

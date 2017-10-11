@@ -16,7 +16,15 @@
 	        @Html.DisplayFor(model => experience.Location.City), 
 		    @Html.DisplayFor(model => experience.Location.Country)
 		    @Html.ActionLink("Details", "Details", new{id = experience.ExperienceId})
-		    @Html.ActionLink("Edit", "Edit", new{id = experience.ExperienceId})
+
+		  <a class="bk-btn" href="@Url.Action("Edit", new{id = experience.ExperienceId})">
+            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            <span>Edit</span>
+          </a>
+		  <a class="bk-btn" href="@Url.Action("Edit", new{id = experience.ExperienceId})">
+            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            <span>Edit</span>
+          </a>
 		    @Html.ActionLink("Delete", "Delete", new{id = experience.ExperienceId})
 	    </li>
 

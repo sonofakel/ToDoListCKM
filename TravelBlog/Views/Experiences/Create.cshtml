@@ -6,12 +6,12 @@
 
 @using (Html.BeginForm())
 {
+    <input type="hidden" name="LocationId" value="@ViewBag.LocationId">
     @Html.LabelFor(model => model.Title)
     @Html.EditorFor(model => model.Title)
     @Html.LabelFor(model => model.Story)
     @Html.EditorFor(model => model.Story)
-    @Html.LabelFor(model=>model.LocationId)
-    @Html.DropDownList("LocationId")
+
     <input type="submit" value="Create" class="btn btn-info">
 }
 

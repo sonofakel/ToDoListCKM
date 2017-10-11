@@ -1,0 +1,15 @@
+﻿@model IEnumerable<TravelBlog.Models.Person>
+
+@{
+    ViewData["Title"] = "People List";
+}
+
+<h1>People</h1>
+
+@foreach(var person in Model) 
+{
+    <p>
+    	@Html.DisplayFor(model => person.FirstName) 
+        @Html.DisplayFor(model => person.LastName)
+	</p>
+}

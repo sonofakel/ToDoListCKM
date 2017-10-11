@@ -6,17 +6,20 @@
 }
 
 <h2>Locations</h2>
-<p>@Html.ActionLink("Add new location", "Create", new { @class="btn btn-default" })</p>
-<!--<h4>@Html.DisplayNameFor(model => model.City)</h4>>
--->
+<p>@Html.ActionLink("Add new location", "Create")</p>
+
 <ul>
     @foreach(var listLocation in Model)
 	{
         <li>
-		    @Html.DisplayFor(modelLocation => listLocation.City)
-		    @Html.ActionLink("Details", "Details", new { id = listLocation.LocationId })
-            | @Html.ActionLink("Edit", "Edit", new { id = listLocation.LocationId })
-            | @Html.ActionLink("Delete", "Delete", new { id = listLocation.LocationId })
+		    @Html.DisplayFor(modelLocation => listLocation.City),
+		    @Html.DisplayFor(modelLocation => listLocation.State),
+		    @Html.DisplayFor(modelLocation => listLocation.Country)
+
+        <a href="@Url.Action("Details", new { id = listLocation.LocationId })">
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
+            <span>Details</span>
+        </a>
 		
 	    </li>
 	}

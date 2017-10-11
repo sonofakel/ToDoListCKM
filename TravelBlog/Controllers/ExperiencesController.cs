@@ -23,9 +23,11 @@ namespace TravelBlog.Controllers
 
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
-            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "City");
+            ViewBag.LocationId = id;
+
+          
             return View();
         }
 
@@ -34,12 +36,13 @@ namespace TravelBlog.Controllers
         {
             db.Experiences.Add(experience);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Locations", new {id = experience.LocationId});
         }
 
         public IActionResult Details(int id)
         {
             var thisExperience = db.Experiences.Include(experience => experience.Location)
+                                   .Include(experience => experience.People)
                                    .FirstOrDefault(experience => experience.ExperienceId == id);
             return View(thisExperience);
         }
@@ -55,9 +58,10 @@ namespace TravelBlog.Controllers
         public IActionResult DeleteConfirmation(int id)
         {
             var thisExperience = db.Experiences.FirstOrDefault(experience => experience.ExperienceId == id);
+            var locationId = thisExperience.LocationId;
             db.Experiences.Remove(thisExperience);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", "Locations", new { id = locationId });
         }
 
         public IActionResult Edit(int id)
@@ -72,7 +76,7 @@ namespace TravelBlog.Controllers
         {
             db.Entry(experience).State = EntityState.Modified;
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details", new { id = experience.ExperienceId});
         }
     }
 }

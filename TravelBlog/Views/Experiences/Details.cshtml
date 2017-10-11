@@ -3,9 +3,60 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+<div class="back-loc-btn">
 <h1>@Html.DisplayFor(model => model.Title)</h1>
-@Html.DisplayFor(model => model.Location.City),
-@Html.DisplayFor(model => model.Location.Country)
 
-<h4>@Html.DisplayFor(model => model.Story)</h4>
+
+	<a class="bk-btn" href="@Url.Action("Details", "Locations", new {id = Model.LocationId})">
+		<i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+		<span>Back</span>
+	</a>
+
+
+</div>
+    <p>
+       <a href="@Url.Action("Edit", "Experiences", new {id = Model.ExperienceId})">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <span>Edit</span>
+    </a> &nbsp;&nbsp; 
+       <a href="@Url.Action("Delete", "Experiences", new {id = Model.ExperienceId})">
+       <i class="fa fa-trash" aria-hidden="true"></i>
+        <span>Delete</span>
+    </a>
+    </p>
+
+
+
+<em><strong>@Html.DisplayFor(model => model.Location.City),
+@Html.DisplayFor(model => model.Location.Country)</strong></em>
+
+<article>@Html.DisplayFor(model => model.Story)</article>
+<br>
+
+
+<h4>People involved in this experience</h4>
+<em>@Html.ActionLink("Add Person to Experience", "Create", "People", new {id = Model.ExperienceId})</em>
+<br>
+<br>
+@foreach(var person in Model.People)
+{   <p>
+    <i class="fa fa-user-o fa-lg" aria-hidden="true"></i> 
+	
+	@Html.DisplayFor(model => person.FirstName) 
+    @Html.DisplayFor(model => person.LastName) &nbsp;
+	
+	<a href="@Url.Action("Edit", "People", new {id = person.PersonId})">
+        <i class="fa fa-pencil" aria-hidden="true"></i> 
+    </a>
+
+	<a href="@Url.Action("Delete", "People", new {id = person.PersonId})">
+        <i class="fa fa-trash" aria-hidden="true"></i> 
+    </a>
+	
+    
+    </p>
+}
+
+
+
+

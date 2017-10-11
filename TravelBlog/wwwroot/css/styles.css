@@ -1,0 +1,12 @@
+﻿body {
+    background-color: snow;
+}
+
+.back-loc-btn {
+    display:inline-flex;
+}
+
+.bk-btn {
+     margin-top: 15px;
+     margin-left: 20px;
+}
