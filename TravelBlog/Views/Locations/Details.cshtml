@@ -11,7 +11,14 @@
 	@Html.DisplayNameFor(model => model.City): @Html.DisplayFor(model => model.City)
    
 </p>
-<p> @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-    | @Html.ActionLink("Delete", "Delete", new { id = Model.Id })</p>
+<p> @Html.ActionLink("Edit", "Edit", new { id = Model.LocationId })
+    | @Html.ActionLink("Delete", "Delete", new { id = Model.LocationId })</p>
+
+    @foreach(var exp in Model.Experiences)
+    {
+        <p>@Html.DisplayNameFor(model => exp.Title):@Html.DisplayFor(model => exp.Title) </p> 
+        <p>@Html.DisplayNameFor(model => exp.Story): @Html.DisplayFor(model => exp.Story)</p>
+        <hr>
+    }
 
 <p>@Html.ActionLink("Back to list", "Index")</p>

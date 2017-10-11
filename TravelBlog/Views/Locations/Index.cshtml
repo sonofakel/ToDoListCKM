@@ -14,10 +14,12 @@
 	{
         <li>
 		    @Html.DisplayFor(modelLocation => listLocation.City)
-		    @Html.ActionLink("Details", "Details", new { id = listLocation.Id })
-            | @Html.ActionLink("Edit", "Edit", new { id = listLocation.Id })
-            | @Html.ActionLink("Delete", "Delete", new { id = listLocation.Id })
+		    @Html.ActionLink("Details", "Details", new { id = listLocation.LocationId })
+            | @Html.ActionLink("Edit", "Edit", new { id = listLocation.LocationId })
+            | @Html.ActionLink("Delete", "Delete", new { id = listLocation.LocationId })
+		
 	    </li>
 	}
 </ul>
+
 

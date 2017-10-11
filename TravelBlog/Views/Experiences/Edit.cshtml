@@ -1,0 +1,24 @@
+﻿@model TravelBlog.Models.Experience
+
+@{
+
+  ViewData["Title"] = "Edit Experience";
+}
+
+<h1>Edit experience</h1>
+
+<h2> Edit this experience: @Html.DisplayFor(model => model.Title)</h2>
+
+@using (@Html.BeginForm())
+
+{
+@Html.HiddenFor(model => model.ExperienceId)
+@Html.HiddenFor(model => model.LocationId)
+@Html.LabelFor(model => model.Title)
+@Html.EditorFor(model => model.Title)
+@Html.LabelFor(model => model.Story)
+@Html.EditorFor(model => model.Story)
+
+
+<input type="submit" value="Save" class="btn btn-info" />
+}

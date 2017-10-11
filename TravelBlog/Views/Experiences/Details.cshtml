@@ -1,0 +1,11 @@
+﻿@model TravelBlog.Models.Experience
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Title)</h1>
+@Html.DisplayFor(model => model.Location.City),
+@Html.DisplayFor(model => model.Location.Country)
+
+<h4>@Html.DisplayFor(model => model.Story)</h4>

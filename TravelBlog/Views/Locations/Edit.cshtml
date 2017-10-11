@@ -11,7 +11,7 @@
 
 @using (Html.BeginForm())
 {
-    @Html.HiddenFor(model => model.Id)
+    @Html.HiddenFor(model => model.LocationId)
     @Html.LabelFor(model => model.Country)
     @Html.EditorFor(model => model.Country)
     @Html.LabelFor(model => model.City)
