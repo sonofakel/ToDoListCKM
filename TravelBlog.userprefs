@@ -1,7 +1,26 @@
 ﻿<Properties StartupConfiguration="{68744D5F-FCD5-4643-A598-102EDE2A605C}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TravelBlog/Views/Locations/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TravelBlog/Views/Locations/Edit.cshtml">
     <Files>
-      <File FileName="TravelBlog/Views/Locations/Index.cshtml" Line="20" Column="3" />
+      <File FileName="TravelBlog/Models/Location.cs" Line="17" Column="6" />
+      <File FileName="TravelBlog/Views/Locations/Create.cshtml" Line="21" Column="42" />
+      <File FileName="TravelBlog/Controllers/LocationsController.cs" Line="29" Column="27" />
+      <File FileName="TravelBlog/Views/Locations/Index.cshtml" Line="22" Column="13" />
+      <File FileName="TravelBlog/Views/Locations/Details.cshtml" Line="20" Column="6" />
+      <File FileName="TravelBlog/Views/Locations/Edit.cshtml" Line="17" Column="5" />
+      <File FileName="TravelBlog/Views/Experiences/Details.cshtml" Line="49" Column="65" />
+      <File FileName="TravelBlog/Views/People/Create.cshtml" Line="9" Column="41" />
+      <File FileName="TravelBlog/Models/Experience.cs" Line="24" Column="1" />
+      <File FileName="TravelBlog/Views/Shared/_Layout.cshtml" Line="12" Column="28" />
+      <File FileName="TravelBlog/wwwroot/css/styles.css" Line="10" Column="20" />
+      <File FileName="TravelBlog/Controllers/PeopleController.cs" Line="42" Column="10" />
+      <File FileName="TravelBlog/Views/Experiences/Delete.cshtml" Line="1" Column="1" />
+      <File FileName="TravelBlog/Views/Experiences/Index.cshtml" Line="24" Column="5" />
+      <File FileName="TravelBlog/Controllers/ExperiencesController.cs" Line="69" Column="34" />
+      <File FileName="TravelBlog/Program.cs" Line="21" Column="1" />
+      <File FileName="TravelBlog/Startup.cs" Line="54" Column="34" />
+      <File FileName="TravelBlog/Models/TravelBlogContext.cs" Line="10" Column="50" />
+      <File FileName="TravelBlog/Views/People/Edit.cshtml" Line="7" Column="2" />
+      <File FileName="TravelBlog/Views/Experiences/Edit.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -10,6 +29,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="TravelBlog/Controllers/LocationsController.cs" line="23" offsetX="623" offsetY="616" expression="thisLocation" liveUpdate="False" />
+    <Watch file="TravelBlog/Controllers/PeopleController.cs" line="24" offsetX="335" offsetY="345" expression="ViewBag.ExperienceId" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.TravelBlog PreferredExecutionTarget="MonoDevelop.Default" />
